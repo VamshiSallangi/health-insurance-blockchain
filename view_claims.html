@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>View Claims</title>
+</head>
+<body style="text-align:center;">
+  <h2>📋 All Claims</h2>
+  <table border="1" cellpadding="10" style="margin:auto;">
+    <tr><th>Claim ID</th><th>Age</th><th>Gender</th><th>Diagnosis</th><th>Hospital</th><th>Amount</th><th>Submitted At</th></tr>
+    {% for c in claims %}
+      <tr>
+        <td>{{ c.claim_id }}</td>
+        <td>{{ c.age }}</td>
+        <td>{{ c.gender }}</td>
+        <td>{{ c.diagnosis }}</td>
+        <td>{{ c.hospital }}</td>
+        <td>{{ c.claim_amount }}</td>
+        <td>{{ c.submitted_at }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+  <br><a href="/">⬅ Back to Home</a>
+</body>
+</html>
